@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雷 - 软件工程学生简历</title>
+    <style>
+        :root {
+            --primary-color: #2196F3;  /* 主色调改为科技蓝 */
+            --secondary-color: #607D8B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            line-height: 1.7;
+            color: #455A64;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.8em;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+        }
+
+        .school-info {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        /* 内容区块 */
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        /* 项目展示 */
+        .project-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .tech-tag {
+            background: #E3F2FD;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        /* 时间轴教育经历 */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #B0BEC5;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>高雷</h1>
+            <p class="school-info">华北水利水电大学 · 软件工程专业（2023级）</p >
+            <div class="contact-info">
+                <span>📧 gaolei@stu.ncwu.edu.cn</span>
+                <span>📱 166-1234-5678</span>
+                <span>📌 GitHub: github.com/gaolei-dev</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>专业技能</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">c++</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">c</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Docker</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>项目实践</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>校园二手交易平台</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <ul>
+                        <li>实现商品发布、在线聊天、交易系统</li>
+                        <li>采用JWT实现安全认证</li>
+                        <li>日均访问量300+次</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>智能图书馆管理系统</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">数据分析</span>
+                    </div>
+                    <ul>
+                        <li>开发图书推荐算法</li>
+                        <li>实现借阅数据可视化</li>
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>教育背景</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>华北水利水电大学</h3>
+                    <p>2023.09 - 2027.06（预计） | 软件工程专业</p >
+                    <p>主修课程：数据结构与算法、软件工程、数据库原理、操作系统、计算机网络</p >
+                    <p>  排名：专业前15%</p >
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>荣誉奖项</h2>
+            <ul style="padding-left: 25px;">
+                <li>国家励志奖学金</li>
+                
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
